@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 4302608236610247455}
   - component: {fileID: -4969999932043721800}
   - component: {fileID: -7823085243592377829}
+  - component: {fileID: 3914468709487197614}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -166,6 +167,7 @@ MonoBehaviour:
   - {fileID: 4302608236610247455}
   - {fileID: -4969999932043721800}
   - {fileID: -7823085243592377829}
+  - {fileID: 3914468709487197614}
   - {fileID: 9210254698087662252}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &4091378080438739665
@@ -250,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bfb917753a4caa8ed7e95c67059981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Health: 100
+  _Health: 1
 --- !u!114 &-7823085243592377829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +268,20 @@ MonoBehaviour:
   _healthComponent: {fileID: -4969999932043721800}
   _movementComponent: {fileID: 3376722275905433832}
   _rotationComponent: {fileID: 8010078547615207469}
+--- !u!114 &3914468709487197614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779524641558855671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52133ae52c39452ba7983cdd11fed64f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _visual: {fileID: 9096785692309047956}
+  _healthComponent: {fileID: -4969999932043721800}
 --- !u!1 &8974689364854590978
 GameObject:
   m_ObjectHideFlags: 0
