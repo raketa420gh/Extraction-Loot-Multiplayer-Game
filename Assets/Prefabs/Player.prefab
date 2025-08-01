@@ -54,7 +54,6 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 4091378080438739665}
-  - {fileID: 7547329405784073659}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &4091378080438739665
 MonoBehaviour:
@@ -98,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a919185cca964e6fb03ce72c4ca4baee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveComponent: {fileID: 3376722275905433832}
+  _inputReceiver: {fileID: 0}
+  _movementComponent: {fileID: 0}
+  _rotationComponent: {fileID: 0}
 --- !u!1 &8974689364854590978
 GameObject:
   m_ObjectHideFlags: 0
