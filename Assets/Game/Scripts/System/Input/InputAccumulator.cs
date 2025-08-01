@@ -18,12 +18,26 @@ public sealed class InputAccumulator : MonoBehaviour
 
     private void OnInput(NetworkRunner runner, NetworkInput input)
     {
-        float dx = Input.GetAxis("Horizontal");
-        float dz = Input.GetAxis("Vertical");
-
+        var buttons = new NetworkButtons();
+        AccumulateFire(ref buttons);
+        
         input.Set(new InputData
         {
-            Direction = new Vector3(dx, 0, dz),
+            Direction = AccumulateMove(),
+            Buttons = buttons
         });
+    }
+
+    private void AccumulateFire(ref NetworkButtons buttons)
+    {
+        buttons.Set(InputKeys.Fire, Input.GetMouseButton(0));
+    }
+
+    private Vector3 AccumulateMove()
+    {
+        float dx = Input.GetAxis("Horizontal");
+        float dz = Input.GetAxis("Vertical");
+        
+        return new Vector3(dx, 0, dz);
     }
 }
