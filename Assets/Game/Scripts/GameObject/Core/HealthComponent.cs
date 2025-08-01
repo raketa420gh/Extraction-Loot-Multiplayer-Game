@@ -1,9 +1,13 @@
+using System;
 using Fusion;
 using UnityEngine;
 
 public sealed class HealthComponent : NetworkBehaviour
 {
+    public event Action<int> OnHealthChanged;
+
     [Networked]
+    [OnChangedRender(nameof(InvokeHealthChanged))]
     public int Health { get; private set; }
 
     public bool TakeDamage(int damage)
@@ -18,5 +22,10 @@ public sealed class HealthComponent : NetworkBehaviour
     public bool Exists()
     {
         return Health > 0;
+    }
+
+    private void InvokeHealthChanged()
+    {
+        OnHealthChanged?.Invoke(Health);
     }
 }
