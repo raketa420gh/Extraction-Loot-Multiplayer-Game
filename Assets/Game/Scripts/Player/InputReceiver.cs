@@ -32,7 +32,7 @@ public class InputReceiver : NetworkBehaviour
 
     private void ProcessFire(InputData input)
     {
-        if (input.Buttons.WasPressed(_previousButtons, InputKeys.Fire))
+        if (input.Buttons.WasPressed(_previousButtons, InputKeys.Fire) && Runner.IsForward)
         {
             OnFire?.Invoke();
         }
