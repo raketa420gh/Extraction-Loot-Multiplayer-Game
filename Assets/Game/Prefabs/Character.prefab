@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &347024841258543249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1348277955478444658}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1348277955478444658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347024841258543249}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5768937066696924497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4840220385983899922
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,6 +154,8 @@ GameObject:
   - component: {fileID: -4969999932043721800}
   - component: {fileID: -7823085243592377829}
   - component: {fileID: 3914468709487197614}
+  - component: {fileID: -9138550338440616157}
+  - component: {fileID: 3087071879328468908}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -168,6 +201,7 @@ MonoBehaviour:
   - {fileID: -4969999932043721800}
   - {fileID: -7823085243592377829}
   - {fileID: 3914468709487197614}
+  - {fileID: -9138550338440616157}
   - {fileID: 9210254698087662252}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &4091378080438739665
@@ -282,6 +316,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _visual: {fileID: 9096785692309047956}
   _healthComponent: {fileID: -4969999932043721800}
+--- !u!114 &-9138550338440616157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779524641558855671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7488e16c1e44848ad7ad8285a336b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _firePoint: {fileID: 1348277955478444658}
+  _projectilePrefab:
+    RawGuidValue: 1b090885dfa045c4aa559d07d0096017
+--- !u!114 &3087071879328468908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779524641558855671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a4a2f1fa344e8b8fa1537648e61a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputReceiver: {fileID: 4302608236610247455}
+  _fireComponent: {fileID: -9138550338440616157}
 --- !u!1 &8974689364854590978
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +484,7 @@ Transform:
   m_Children:
   - {fileID: 4759091451511577136}
   - {fileID: 1560250470590864867}
+  - {fileID: 1348277955478444658}
   m_Father: {fileID: 3256908706839082214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9210254698087662252
