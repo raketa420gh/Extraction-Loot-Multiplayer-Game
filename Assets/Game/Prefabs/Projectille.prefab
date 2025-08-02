@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 2949868595882875542}
   - component: {fileID: 8052912935029187189}
   - component: {fileID: 478508448971782304}
+  - component: {fileID: 7863652561353302455}
+  - component: {fileID: 4523928029036055638}
   m_Layer: 0
   m_Name: Projectille
   m_TagString: Untagged
@@ -86,6 +88,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 8052912935029187189}
   - {fileID: 478508448971782304}
+  - {fileID: 4523928029036055638}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &8052912935029187189
 MonoBehaviour:
@@ -119,6 +122,32 @@ MonoBehaviour:
   _renderer: {fileID: 8270037609117163029}
   _blue: {fileID: 2100000, guid: d29d50bc9d10e84458b8c8117460d1cc, type: 2}
   _red: {fileID: 2100000, guid: 58eec80e085f03748983fd11a539206c, type: 2}
+--- !u!114 &7863652561353302455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626515598767702819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b721ab4cb5674a4c88388d432bac412b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+--- !u!114 &4523928029036055638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626515598767702819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982ed2f86312417e957c36ee3167a56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifetime: 5
 --- !u!1 &6321625556665647528
 GameObject:
   m_ObjectHideFlags: 0
