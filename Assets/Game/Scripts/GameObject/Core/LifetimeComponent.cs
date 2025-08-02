@@ -9,7 +9,7 @@ public sealed class LifetimeComponent : NetworkBehaviour
     [Networked]
     public TickTimer Timer { get; set; }
 
-    public override void Spawned()
+    public void Init()
     {
         Timer = TickTimer.CreateFromSeconds(Runner, _lifetime);
     }

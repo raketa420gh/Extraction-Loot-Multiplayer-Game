@@ -26,7 +26,8 @@ public sealed class FireComponent : NetworkBehaviour
         PlayerRef player = Object.InputAuthority;
         Vector3 position = _firePoint.position;
         Quaternion rotation = _firePoint.rotation;
-        Runner.Spawn(_projectilePrefab, position, rotation, player);
+        Runner.Spawn(_projectilePrefab, position, rotation, player, (_, o) =>
+            o.GetComponent<LifetimeComponent>().Init());
 
         _timer = TickTimer.CreateFromSeconds(Runner, _cooldown);
     }
